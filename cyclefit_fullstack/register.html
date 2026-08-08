@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CycleFit | Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="logo">CycleFit</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <h1>Join CycleFit</h1>
+        <p>Register for a membership and receive a personalized plan.</p>
+      </section>
+
+      <section class="form-grid">
+        <form class="register-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="16" max="60" />
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" />
+
+          <fieldset>
+            <legend>Preferred Program</legend>
+            <label><input type="radio" name="program" value="beginner" /> Beginner</label>
+            <label><input type="radio" name="program" value="strength" /> Strength</label>
+            <label><input type="radio" name="program" value="recovery" /> Recovery</label>
+          </fieldset>
+
+          <label for="plan">Membership Plan</label>
+          <select id="plan" name="plan">
+            <option>Starter</option>
+            <option>Monthly</option>
+            <option>Premium</option>
+          </select>
+
+          <label class="checkbox-row"><input type="checkbox" name="updates" /> Receive wellness updates</label>
+
+          <label for="goal">Your Goal</label>
+          <textarea id="goal" name="goal" rows="4" placeholder="Tell us your goal"></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Register</button>
+            <button type="reset" class="btn secondary">Reset</button>
+          </div>
+        </form>
+
+        <aside class="benefits-card">
+          <h2>What you get</h2>
+          <ul>
+            <li>Weekly cycle-aware routines</li>
+            <li>Community support</li>
+            <li>Fitness guidance from coaches</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 CycleFit | Start your journey</p>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>

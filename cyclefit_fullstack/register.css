@@ -1,0 +1,141 @@
+:root {
+  --primary: #b4557d;
+  --secondary: #f2b8c5;
+  --dark: #4b2b3b;
+  --text: #5f3f4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8fb, #fceef3);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links, .footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a, .footer-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.nav-links a:hover, .nav-links a.active, .footer-links a:hover {
+  color: var(--primary);
+}
+
+main {
+  padding: 2rem;
+}
+
+.page-title {
+  margin-bottom: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+}
+
+.register-form, .benefits-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+input, select, textarea, button {
+  font: inherit;
+  padding: 0.75rem;
+  border: 1px solid #f0dce4;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: 1px solid #f0dce4;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), #d97ba6);
+  color: white;
+}
+
+.btn.secondary {
+  background: #fff3f7;
+  color: var(--dark);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  color: #7c5b67;
+}
+
+@media (max-width: 800px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,155 @@
+:root {
+  --primary: #b4557d;
+  --secondary: #f2b8c5;
+  --dark: #4b2b3b;
+  --light: #fff8fb;
+  --text: #5f3f4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8fb, #fceef3);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links, .footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a, .footer-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active, .footer-links a:hover {
+  color: var(--primary);
+}
+
+main {
+  padding: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.2rem 0 1rem;
+  color: var(--dark);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), #d97ba6);
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: var(--primary);
+  border: 1px solid #f3dce6;
+}
+
+.features, .tips-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card, .main-card, .tip-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.tip-card {
+  background: linear-gradient(135deg, #fff5f8, #ffe8ef);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  color: #7c5b67;
+}
+
+@media (max-width: 900px) {
+  .hero, .features, .tips-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
